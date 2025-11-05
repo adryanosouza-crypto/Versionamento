@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <h1>Quiz de Tecnologia</h1>
+
+    <!-- START SCREEN -->
+    <section id="start-screen" class="screen active">
+      <p>Teste seus conhecimentos em tecnologias web.</p>
+      <button id="start-btn" class="btn">Começar Quiz</button>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz">
+        <div class="meta">
+          <span>Pergunta <strong id="current-question">0</strong> de <strong id="total-questions">0</strong></span>
+          <span class="score">Pontuação: <strong id="score">0</strong></span>
+        </div>
+
+        <div class="progress-bar" aria-hidden="true">
+          <div id="progress" class="progress"></div>
+        </div>
+
+        <h2 id="question-text">Pergunta aqui</h2>
+
+        <div id="answers-container" class="answers"></div>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="result-screen" class="screen">
+      <h2>Resultado</h2>
+      <p id="result-message"></p>
+      <p>Você acertou <strong id="final-score">0</strong> de <strong id="max-score">0</strong></p>
+      <button id="restart-btn" class="btn">Reiniciar</button>
+    </section>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
