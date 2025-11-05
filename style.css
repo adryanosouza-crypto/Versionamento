@@ -1,0 +1,154 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background:#001e4d;
+  color:#001e4d;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.app{
+  background:#fff;
+  width:90%;
+  max-width:600px;
+  margin:80px auto;
+  padding:28px;
+  border-radius:8px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.12);
+}
+
+.app h1{
+  font-size:22px;
+  color:#001e4d;
+  font-weight:600;
+  margin-bottom:12px;
+  border-bottom:1px solid #e6e6e6;
+  padding-bottom:12px;
+}
+
+.screen{
+  display:none;
+}
+
+.screen.active{
+  display:block;
+}
+
+/* Meta row */
+.meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  color:#444;
+  font-weight:500;
+}
+
+/* Progress */
+.progress-bar{
+  height:8px;
+  background:#f0f0f0;
+  border-radius:6px;
+  overflow:hidden;
+  margin:10px 0 18px;
+}
+
+.progress{
+  height:100%;
+  width:0%;
+  background:#e86a33;
+  transition:width 0.4s ease;
+}
+
+/* Question */
+.quiz h2{
+  font-size:18px;
+  color:#001e4d;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+/* Answer buttons */
+.btn{
+  background:#fff;
+  color:#222;
+  font-weight:500;
+  width:100%;
+  border:1px solid #222;
+  padding:10px;
+  margin:10px 0;
+  text-align:left;
+  border-radius:4px;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+
+.btn:hover:not([disabled]){
+  background:#222;
+  color:#fff;
+}
+
+.btn:disabled{
+  cursor:not-allowed;
+  opacity:0.9;
+}
+
+/* specific answer button styling */
+.answer-btn{
+  display:block;
+  width:100%;
+  text-align:left;
+  padding:12px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #d0d0d0;
+  background:#fff;
+  cursor:pointer;
+  transition:background 0.2s, color 0.2s, transform 0.06s;
+  font-weight:500;
+}
+
+.answer-btn:hover:not([disabled]){
+  transform:translateY(-1px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* correct / incorrect states */
+.answer-btn.correct,
+.correct{
+  background:#9aeabc;
+  border-color:#6be3b1;
+  color:#063d28;
+}
+
+.answer-btn.incorrect,
+.incorrect{
+  background:#ffb4b4;
+  border-color:#ff8e8e;
+  color:#6a0b0b;
+}
+
+/* disabled answer */
+.answer-btn:disabled{
+  opacity:0.85;
+  cursor:not-allowed;
+}
+
+/* Result screen */
+#result-screen h2{
+  margin-bottom:8px;
+}
+
+#result-screen p{
+  margin:8px 0;
+}
+
+@media (max-width:420px){
+  .app{ padding:18px; margin:40px 8px; }
+  .meta{ font-size:14px; }
+}
